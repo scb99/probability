@@ -21,6 +21,7 @@ namespace Probability
             return BitConverter.ToInt32(bytes.Value, 0) & int.MaxValue;
         }
 
+        // Doesn't seem to be called??
         public static double NextDouble()
         {
             while (true)

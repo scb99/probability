@@ -9,7 +9,7 @@ namespace Probability
     {
         public static void DoIt()
         {
-            Console.WriteLine("\nEpisode 03\n\nThe sum of 12 random doubles:");
+            Console.WriteLine("Episode 03\n\nThe sum of 12 random doubles:");
             Console.WriteLine(SCU.Distribution.Samples().Take(12).Sum());
             Console.WriteLine();
 

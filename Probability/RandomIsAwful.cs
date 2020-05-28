@@ -11,9 +11,9 @@ namespace Probability
 
         public static void DoIt()
         {
-            Console.WriteLine();
             Console.WriteLine(
 @"Episode 1: Random is awful
+
 In earlier days this would print 100 of the same number.
 That bug has been fixed, but you'll note we still get no sixes.
 ");

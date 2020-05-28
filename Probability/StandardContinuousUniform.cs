@@ -3,10 +3,12 @@
     public sealed class StandardContinuousUniform :
         IWeightedDistribution<double>
     {
-        public static readonly StandardContinuousUniform
-            Distribution = new StandardContinuousUniform();
         private StandardContinuousUniform() { }
+
+        public static StandardContinuousUniform Distribution { get; set; } = new StandardContinuousUniform();
+
         public double Sample() => Pseudorandom.NextDouble();
-        public double Weight(double x) => 0.0 <= x & x < 1.0 ? 1.0 : 0.0;
+
+        public double Weight(double t) => 0.0 <= t & t < 1.0 ? 1.0 : 0.0;
     }
 }

@@ -7,6 +7,7 @@ namespace Probability
         public static void DoIt()
         {
             Console.WriteLine(WeightedInteger.Distribution(10, 11, 5).Histogram());
+            Console.WriteLine();
         }
     }
 }

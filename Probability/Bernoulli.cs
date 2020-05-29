@@ -57,4 +57,3 @@ namespace Probability
         public override string ToString() => $"Bernoulli[{this.Zero}, {this.One}]";
     }
 }
-

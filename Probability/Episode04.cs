@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Linq;
+
 namespace Probability
 {
     using SDU = StandardDiscreteUniform;
+
     static class Episode04
     {
         public static void DoIt()

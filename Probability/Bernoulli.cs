@@ -7,7 +7,7 @@ namespace Probability
     using SCU = StandardContinuousUniform;
 
     public sealed class Bernoulli : 
-        IDiscreteDistribution<int>, IWeightedDistribution<int>
+        IDiscreteDistribution<int>//, IWeightedDistribution<int>
     {
         public static IDiscreteDistribution<int> Distribution(int zero, int one)
         {

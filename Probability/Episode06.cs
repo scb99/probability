@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 
 abstract class Animal { }
+
 sealed class Cat : Animal { }
+
 sealed class Dog : Animal { }
+
 sealed class Goldfish : Animal { }
 
 namespace Probability
@@ -16,8 +19,12 @@ namespace Probability
             var dog = new Dog();
             var fish = new Goldfish();
             var animals = new List<Animal>() { cat, dog, dog, fish };
+
             Console.WriteLine(animals.ToUniform().Histogram());
+            Console.WriteLine();
+
             Console.WriteLine(animals.ToUniform().ShowWeights());
+            Console.WriteLine();
         }
     }
 }

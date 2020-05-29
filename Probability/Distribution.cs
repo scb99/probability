@@ -137,8 +137,8 @@ namespace Probability
 
         public static double ExpectedValue(this IDiscreteDistribution<int> d) =>
             d.Support()
-             .Select(s => 
-                 (double)s * d.Weight(s)).Sum() / d.TotalWeight();
+             .Select(s => (double)s * d.Weight(s))
+             .Sum() / d.TotalWeight();
 
         public static double ExpectedValueByImportance(
             this IWeightedDistribution<double> p,

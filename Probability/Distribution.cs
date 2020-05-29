@@ -28,12 +28,12 @@ namespace Probability
         public static string ShowWeights<T>(this IDiscreteDistribution<T> d)
         {
             int labelMax = d.Support()
-                .Select(x => x.ToString().Length)
-                .Max();
+                            .Select(x => x.ToString().Length)
+                            .Max();
 
             return d.Support()
-                .Select(s => $"{ToLabel(s)}:{d.Weight(s)}")
-                .NewlineSeparated();
+                    .Select(s => $"{ToLabel(s)}:{d.Weight(s)}")
+                    .NewlineSeparated();
 
             string ToLabel(T t) =>
                 t.ToString().PadLeft(labelMax);
@@ -44,8 +44,8 @@ namespace Probability
             Func<A, R> projection)
         {
             var dict = d.Support()
-                .GroupBy(projection, a => d.Weight(a))
-                .ToDictionary(g => g.Key, g => g.Sum());
+                        .GroupBy(projection, a => d.Weight(a))
+                        .ToDictionary(g => g.Key, g => g.Sum());
 
             var rs = dict.Keys.ToList();
 
@@ -69,9 +69,9 @@ namespace Probability
             Func<A, B, C> projection)
         {
             int lcm = prior.Support()
-                .Select(a => likelihood(a).TotalWeight())
-                .Where(x => x != 0)
-                .LCM();
+                           .Select(a => likelihood(a).TotalWeight())
+                           .Where(x => x != 0)
+                           .LCM();
 
             var w = from a in prior.Support()
                     let pb = likelihood(a)
@@ -115,7 +115,7 @@ namespace Probability
             var list = items.ToList();
 
             return SDU.Distribution(0, list.Count - 1)
-                .Select(i => list[i]);
+                      .Select(i => list[i]);
         }
 
         public static IDiscreteDistribution<T> ToWeighted<T>(

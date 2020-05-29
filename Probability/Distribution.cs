@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+
 namespace Probability
 {
     using SDU = StandardDiscreteUniform;
@@ -12,7 +13,9 @@ namespace Probability
             this IDistribution<T> d)
         {
             while (true)
+            {
                 yield return d.Sample();
+            }
         }
 
         public static string Histogram(
@@ -120,6 +123,7 @@ namespace Probability
             IEnumerable<int> weights)
         {
             var list = items.ToList();
+
             return WeightedInteger.Distribution(weights).Select(i => list[i]);
         }
 

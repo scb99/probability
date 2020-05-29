@@ -46,7 +46,7 @@ namespace Probability
             this.One = one;
         }
 
-        public int Sample() => SCU.Distribution.Sample() <= ((double)Zero) / (Zero + One) ? 0 : 1;
+        public int Sample() => (SCU.Distribution.Sample() <= ((double)Zero) / (Zero + One)) ? 0 : 1;
 
         public IEnumerable<int> Support() => Enumerable.Range(0, 2);
 

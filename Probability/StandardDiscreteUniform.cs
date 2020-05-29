@@ -6,8 +6,8 @@ namespace Probability
     using SCU = StandardContinuousUniform;
 
     public sealed class StandardDiscreteUniform :
-      IDiscreteDistribution<int>,
-      IWeightedDistribution<int>
+        IDiscreteDistribution<int>,
+        IWeightedDistribution<int>
     {
         public static IDiscreteDistribution<int> Distribution(int min, int max)
         {

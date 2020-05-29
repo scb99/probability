@@ -20,6 +20,9 @@ namespace Probability
             var fish = new Goldfish();
             var animals = new List<Animal>() { cat, dog, dog, fish };
 
+            Console.WriteLine("Episode 06");
+            Console.WriteLine();
+
             Console.WriteLine(animals.ToUniform().Histogram());
             Console.WriteLine();
 

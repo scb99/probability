@@ -18,6 +18,7 @@ namespace Probability
             foreach (double c in d.Take(sampleCount))
             {
                 int bucket = (int)(buckets.Length * (c - low) / (high - low));
+
                 if (0 <= bucket && bucket < buckets.Length)
                 {
                     buckets[bucket] += 1;

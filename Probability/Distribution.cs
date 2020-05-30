@@ -201,7 +201,7 @@ namespace Probability
                 b => 
                     Metropolis<double>.Distribution(
                         d => prior.Weight(d) * likelihood(d).Weight(b),
-                            prior,
+                        prior,
                         d => Normal.Distribution(d, 1));
     }
 }

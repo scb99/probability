@@ -10,12 +10,11 @@ namespace Probability
     public static class Distribution
     {
         /// <summary>
-        /// Method to return a sequence of random samples of type T from 
-        /// a distribution of type T
+        /// Method to return a sequence of random samples from a specified distribution 
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="d"></param>
-        /// <returns>A random sample of type T from distribution d</returns>
+        /// <returns>A sequence of random samples from a specified distribution one at a time</returns>
         public static IEnumerable<T> Samples<T>(
             this IDistribution<T> d)
         {

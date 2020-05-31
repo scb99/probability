@@ -10,13 +10,13 @@
         private double σ => Sigma;
 
         /// <summary>
-        /// Represents standard normal distibution (i.e., a normal distribution 
+        /// Returns a standard normal distibution (i.e., a normal distribution 
         /// with μ = 0.0 and σ  = 1.0)
         /// </summary>
         public readonly static Normal Standard = Distribution(0, 1);
 
         /// <summary>
-        /// Represents a normal distribution with mean μ and standard deviation σ
+        /// Returns a normal distribution with mean μ and standard deviation σ
         /// </summary>
         /// <param name="mean">The mean of the normal distribution</param>
         /// <param name="sigma">The standard deviation of the normal distribution</param>

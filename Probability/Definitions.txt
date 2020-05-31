@@ -1,0 +1,17 @@
+﻿Support:
+
+Since we assume the number of possible outcomes of a discrete distribution is small, 
+we can enumerate them; 
+the set of possible outcomes is, oddly enough, 
+called the support of the distribution.
+
+Weight:
+
+Some elements might be more likely than others; 
+the ones that happen more often we say have more weight than the ones that 
+happen less often. 
+I want to be able to describe the weight of each member of a distribution easily, 
+and I do not want to get off in the weeds of representing weights as doubles 
+because double arithmetic has many pitfalls as we well know. 
+For the purposes of this series I’m going to assume that we can weight the 
+members of a distribution by an integer.

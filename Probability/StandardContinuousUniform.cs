@@ -16,7 +16,7 @@
         public static StandardContinuousUniform Distribution { get; set; } = new StandardContinuousUniform();
 
         /// <summary>
-        /// Generates a sample from the standard continuous uniform distribution
+        /// Generates a random sample from the standard continuous uniform distribution
         /// </summary>
         /// <returns>A double over interval [0.0, 1.0)</returns>
         public double Sample() => Pseudorandom.NextDouble();

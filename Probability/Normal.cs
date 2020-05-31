@@ -25,7 +25,8 @@
         /// Generates a random sample that is normally distributed with mean μ and
         /// standard deviation σ
         /// </summary>
-        /// <returns></returns>
+        /// <returns>A random sample that is normally distributed with mean μ and
+        /// standard deviation σ</returns>
         public double Sample() => μ + σ * StandardSample();
 
         /// <summary>

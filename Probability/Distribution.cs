@@ -24,6 +24,13 @@ namespace Probability
             }
         }
 
+        /// <summary>
+        /// Graphical display of data using bars of different heights
+        /// </summary>
+        /// <param name="d"></param>
+        /// <param name="low"></param>
+        /// <param name="high"></param>
+        /// <returns>The height/length of each bar shows how many items fall into each range</returns>
         public static string Histogram(
             this IDistribution<double> d, double low, double high) =>
                 d.Samples().Histogram(low, high);

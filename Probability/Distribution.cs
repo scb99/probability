@@ -25,12 +25,20 @@ namespace Probability
         }
 
         /// <summary>
-        /// Graphical display of data using bars of different heights
+        /// Generate a graphical display of data from random samples
+        /// of the specified distribution. The histogram will consist
+        /// of 40 buckets (to partition the range of values). The buckets
+        /// will be represented along the x-axis. The height of the
+        /// bar above a bucket will represent the scaled number of
+        /// items that fall into that bucket (the maximum height will be
+        /// 20).
+        /// The histogram be displayed using 100000 random samples of
+        /// the distribution.
         /// </summary>
-        /// <param name="d"></param>
-        /// <param name="low"></param>
-        /// <param name="high"></param>
-        /// <returns>The height/length of each bar shows how many items fall into each range</returns>
+        /// <param name="d">The distribution</param>
+        /// <param name="low">The minimum value of a sample of the distribution</param>
+        /// <param name="high">The maximum value of a sample of the distribution</param>
+        /// <returns>A histogram with the height of each column showing the scaled number of generated items that fall into each of the 40 buckets</returns>
         public static string Histogram(
             this IDistribution<double> d, double low, double high) =>
                 d.Samples().Histogram(low, high);

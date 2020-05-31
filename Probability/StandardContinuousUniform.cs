@@ -1,5 +1,8 @@
 ﻿namespace Probability
 {
+    /// <summary>
+    /// Represents a continuous uniform distribution on [0.0, 1.0)
+    /// </summary>
     public sealed class StandardContinuousUniform :
         IWeightedDistribution<double>
     {

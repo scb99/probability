@@ -6,13 +6,21 @@
     {
         public double Mean { get; }
         public double Sigma { get; }
-        public double μ => Mean;
-        public double σ => Sigma;
+        private double μ => Mean;
+        private double σ => Sigma;
 
         /// <summary>
-        /// Represents standard normal distibution (with μ = 0.0 and σ  = 1.0)
+        /// Represents standard normal distibution (i.e., a normal distribution 
+        /// with μ = 0.0 and σ  = 1.0)
         /// </summary>
         public readonly static Normal Standard = Distribution(0, 1);
+
+        /// <summary>
+        /// Represents a normal distribution with mean μ and standard deviation σ
+        /// </summary>
+        /// <param name="mean">The mean of the normal distribution</param>
+        /// <param name="sigma">The standard deviation of the normal distribution</param>
+        /// <returns></returns>
         public static Normal Distribution(double mean, double sigma) =>
             new Normal(mean, sigma);
         private Normal(double mean, double sigma)
@@ -37,7 +45,7 @@
         public double Weight(double x) =>
             Exp(-(x - μ) * (x - μ) / (2 * σ * σ)) * piroot / σ;
 
-        // Box-Muller method to genrate a normally distributed random sample
+        // Box-Muller method to generate a normally distributed random sample
         private double StandardSample() =>
             Sqrt(-2.0 * Log(SCU.Distribution.Sample())) *
                  Cos(2.0 * PI * SCU.Distribution.Sample());

@@ -30,15 +30,15 @@ namespace Probability
         /// of 40 buckets (to partition the range of values). The buckets
         /// will be represented along the x-axis. The height of the
         /// bar above a bucket will represent the scaled number of
-        /// items that fall into that bucket (the maximum height will be
-        /// 20).
-        /// The histogram be displayed using 100000 random samples of
+        /// items that fall into that bucket (the maximum height of
+        /// the bar will be 20).
+        /// The histogram will be displayed using 100000 random samples of
         /// the distribution.
         /// </summary>
         /// <param name="d">The distribution</param>
         /// <param name="low">The minimum value of a sample of the distribution</param>
         /// <param name="high">The maximum value of a sample of the distribution</param>
-        /// <returns>A histogram with the height of each column showing the scaled number of generated items that fall into each of the 40 buckets</returns>
+        /// <returns>A histogram with the height of each column showing the scaled number of generated items that fall into each of the 40 buckets.</returns>
         public static string Histogram(
             this IDistribution<double> d, double low, double high) =>
                 d.Samples().Histogram(low, high);

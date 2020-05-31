@@ -94,7 +94,6 @@ namespace Probability
             Func<A, IDiscreteDistribution<B>> likelihood) =>
                 SelectMany(prior, likelihood, (a, b) => (a, b));
 
-
         public static Func<B, IDiscreteDistribution<C>> Posterior<A, B, C>(
             this IDiscreteDistribution<A> prior,
             Func<A, IDiscreteDistribution<B>> likelihood,

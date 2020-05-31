@@ -8,7 +8,7 @@
         }
 
         /// <summary>
-        /// Represents a uniform distribution of doubles over the interval [0.0, 1.0).
+        /// Represents a continuous uniform distribution of reals over the interval [0.0, 1.0).
         /// </summary>
         public static StandardContinuousUniform Distribution { get; set; } = new StandardContinuousUniform();
 

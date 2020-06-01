@@ -1,7 +1,7 @@
 ﻿namespace Probability
 {
     /// <summary>
-    /// Implements a standard continuous uniform distribution (i.e., a 
+    /// Implements the standard continuous uniform distribution (i.e., a 
     /// distribution defined on [0.0, 1.0))
     /// </summary>
     public sealed class StandardContinuousUniform : IWeightedDistribution<double>
@@ -11,7 +11,7 @@
         }
 
         /// <summary>
-        /// Returns a standard continuous uniform distribution of reals over the interval [0.0, 1.0).
+        /// Returns the standard continuous uniform distribution of reals over the interval [0.0, 1.0).
         /// </summary>
         public static StandardContinuousUniform Distribution { get; set; } = new StandardContinuousUniform();
 

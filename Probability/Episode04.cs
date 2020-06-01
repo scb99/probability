@@ -1,5 +1,5 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
+using static System.Console;
 
 namespace Probability
 {
@@ -9,20 +9,20 @@ namespace Probability
     {
         public static void DoIt()
         {
-            Console.WriteLine("Episode 04");
-            Console.WriteLine();
+            WriteLine("Episode 04");
+            WriteLine();
 
-            Console.WriteLine("10d6:");
-            Console.WriteLine(SDU.Distribution(1, 6).Samples().Take(10).Sum());
-            Console.WriteLine();
+            WriteLine("10d6:");
+            WriteLine(SDU.Distribution(1, 6).Samples().Take(10).Sum());
+            WriteLine();
 
-            Console.WriteLine("1d10:");
-            Console.WriteLine(SDU.Distribution(1, 10).Histogram());
-            Console.WriteLine();
+            WriteLine("1d10:");
+            WriteLine(SDU.Distribution(1, 10).Histogram());
+            WriteLine();
 
-            Console.WriteLine("1d6:");
-            Console.WriteLine(SDU.Distribution(1, 6).ShowWeights());
-            Console.WriteLine();
+            WriteLine("1d6:");
+            WriteLine(SDU.Distribution(1, 6).ShowWeights());
+            WriteLine();
         }
     }
 }

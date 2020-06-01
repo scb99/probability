@@ -18,7 +18,8 @@ namespace Probability
         /// </summary>
         /// <param name="min">Minimum value of discrete distribution</param>
         /// <param name="max">Maximum value of discrete distribution</param>
-        /// <returns>A standard discrete uniform probability distribution</returns>
+        /// <returns>A standard discrete uniform probability distribution 
+        /// with integer outcomes between min and max inclusive</returns>
         public static IDiscreteDistribution<int> Distribution(int min, int max)
         {
             if (min > max)

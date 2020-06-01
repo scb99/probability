@@ -38,7 +38,9 @@ namespace Probability
         /// <param name="d">The distribution</param>
         /// <param name="low">The minimum value of a sample of the distribution</param>
         /// <param name="high">The maximum value of a sample of the distribution</param>
-        /// <returns>A histogram with the height of each column showing the scaled number of generated items that fall into each of the 40 buckets.</returns>
+        /// <returns>A histogram with the height of each column showing the scaled number 
+        /// of generated items that fall into each of the 40 buckets. The buckets
+        /// partition the range of values from low to high.</returns>
         public static string Histogram(
             this IDistribution<double> d, double low, double high) =>
                 d.Samples().Histogram(low, high);

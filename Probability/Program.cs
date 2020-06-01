@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace Probability
 {
@@ -6,8 +6,8 @@ namespace Probability
     {
         static void Main()
         {
-            Console.WriteLine("Probability");
-            Console.WriteLine();
+            WriteLine("Probability");
+            WriteLine();
             // RandomIsAwful.DoIt();
             Episode03.DoIt();
             // Episode04.DoIt();
@@ -39,8 +39,8 @@ namespace Probability
             // Episode36.DoIt();
             // Episode37.DoIt();
             // Episode38.DoIt();
-            Console.WriteLine("Press Enter to finish");
-            Console.ReadLine();
+            WriteLine("Press Enter to finish");
+            ReadLine();
         }
     }
 }

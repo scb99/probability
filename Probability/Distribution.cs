@@ -14,7 +14,7 @@ namespace Probability
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="d"></param>
-        /// <returns>A sequence of random samples from a specified distribution one at a time</returns>
+        /// <returns>A sequence of random samples from a specified distribution returned one at a time</returns>
         public static IEnumerable<T> Samples<T>(
             this IDistribution<T> d)
         {
@@ -45,9 +45,30 @@ namespace Probability
             this IDistribution<double> d, double low, double high) =>
                 d.Samples().Histogram(low, high);
 
+        /// <summary>
+        /// Generate a graphical display of data from random samples
+        /// of the specified distribution. The histogram will consist
+        /// of a maximum of 40 buckets (to partition the range of values). The buckets
+        /// will be represented along the y-axis. The length of the
+        /// bar to the right of a bucket will represent the scaled number of
+        /// items that fall into that bucket.
+        /// The histogram will be displayed using 100000 random samples of
+        /// the distribution.
+        /// </summary>
+        /// <typeparam name="T">The type of values in the distribution</typeparam>
+        /// <param name="d">The distribution</param>
+        /// <returns></returns>
         public static string Histogram<T>(this IDiscreteDistribution<T> d) =>
             d.Samples().DiscreteHistogram();
 
+        /// <summary>
+        /// Generates a string corresponding to the items in the support and their 
+        /// respective weights
+        /// </summary>
+        /// <typeparam name="T">The type of values in the distribution</typeparam>
+        /// <param name="d">The distribution</param>
+        /// <returns>A string corresponding to the items in the support and their 
+        /// respective weights (one item/weight pair per line)</returns>
         public static string ShowWeights<T>(this IDiscreteDistribution<T> d)
         {
             int labelMax = d.Support()
@@ -58,8 +79,7 @@ namespace Probability
                     .Select(s => $"{ToLabel(s)}:{d.Weight(s)}")
                     .NewlineSeparated();
 
-            string ToLabel(T t) =>
-                t.ToString().PadLeft(labelMax);
+            string ToLabel(T t) => t.ToString().PadLeft(labelMax);
         }
 
         public static IDiscreteDistribution<R> Select<A, R>(

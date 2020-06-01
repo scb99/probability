@@ -14,11 +14,11 @@ namespace Probability
         IDiscreteDistribution<int>, IWeightedDistribution<int>
     {
         /// <summary>
-        /// Returns a standard discrete uniform probability distribution over integers
+        /// Returns a standard discrete uniform probability distribution over the integers
         /// </summary>
         /// <param name="min">Minimum value of discrete distribution</param>
         /// <param name="max">Maximum value of discrete distribution</param>
-        /// <returns>A discrete distribution</returns>
+        /// <returns>A standard discrete uniform probability distribution</returns>
         public static IDiscreteDistribution<int> Distribution(int min, int max)
         {
             if (min > max)

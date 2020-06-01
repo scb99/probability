@@ -9,7 +9,7 @@ namespace Probability
             WriteLine("Probability");
             WriteLine();
             // RandomIsAwful.DoIt();
-            Episode03.DoIt();
+            // Episode03.DoIt();
             // Episode04.DoIt();
             // Episode05.DoIt();
             // Episode06.DoIt();

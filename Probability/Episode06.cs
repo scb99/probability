@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using static System.Console;
 
 abstract class Animal { }
 
@@ -20,14 +20,14 @@ namespace Probability
             var fish = new Goldfish();
             var animals = new List<Animal>() { cat, dog, dog, fish };
 
-            Console.WriteLine("Episode 06");
-            Console.WriteLine();
+            WriteLine("Episode 06");
+            WriteLine();
 
-            Console.WriteLine(animals.ToUniform().Histogram());
-            Console.WriteLine();
+            WriteLine(animals.ToUniform().Histogram());
+            WriteLine();
 
-            Console.WriteLine(animals.ToUniform().ShowWeights());
-            Console.WriteLine();
+            WriteLine(animals.ToUniform().ShowWeights());
+            WriteLine();
         }
     }
 }

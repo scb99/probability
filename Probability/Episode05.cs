@@ -1,4 +1,4 @@
-﻿using System;
+﻿using static System.Console;
 
 namespace Probability
 {
@@ -6,12 +6,12 @@ namespace Probability
     {
         public static void DoIt()
         {
-            Console.WriteLine("Episode 05");
-            Console.WriteLine();
+            WriteLine("Episode 05");
+            WriteLine();
 
-            Console.WriteLine("Bernoulli 75% chance of 1");
-            Console.WriteLine(Bernoulli.Distribution(1, 3).Histogram());
-            Console.WriteLine();
+            WriteLine("Bernoulli 75% chance of 1");
+            WriteLine(Bernoulli.Distribution(1, 3).Histogram());
+            WriteLine();
         }
     }
 }

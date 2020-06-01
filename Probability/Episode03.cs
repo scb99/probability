@@ -1,5 +1,5 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
+using static System.Console;
 
 namespace Probability
 {
@@ -9,16 +9,16 @@ namespace Probability
     {
         public static void DoIt()
         {
-            Console.WriteLine("Episode 03\n\nThe sum of 12 random doubles:");
-            Console.WriteLine(SCU.Distribution.Samples().Take(12).Sum());
-            Console.WriteLine();
+            WriteLine("Episode 03\n\nThe sum of 12 random doubles:");
+            WriteLine(SCU.Distribution.Samples().Take(12).Sum());
+            WriteLine();
 
-            Console.WriteLine("A histogram of the SCU:");
-            Console.WriteLine(SCU.Distribution.Histogram(0, 1));
-            Console.WriteLine();
+            WriteLine("A histogram of the SCU:");
+            WriteLine(SCU.Distribution.Histogram(0, 1));
+            WriteLine();
 
-            Console.WriteLine("A histogram of a Gaussian:");
-            Console.WriteLine(Normal.Distribution(1.0, 1.5).Histogram(-4, 6));
+            WriteLine("A histogram of a Gaussian:");
+            WriteLine(Normal.Distribution(1.0, 1.5).Histogram(-4, 6));
         }
     }
 }

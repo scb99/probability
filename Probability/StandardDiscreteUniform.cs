@@ -5,6 +5,11 @@ namespace Probability
 {
     using SCU = StandardContinuousUniform;
 
+    /// <summary>
+    /// Implements the discrete uniform distribution (i.e., a symmetric probability 
+    /// distribution wherein a finite number of values are equally likely to be 
+    /// observed; every one of n values has equal probability 1/n.
+    /// </summary>
     public sealed class StandardDiscreteUniform :
         IDiscreteDistribution<int>, IWeightedDistribution<int>
     {

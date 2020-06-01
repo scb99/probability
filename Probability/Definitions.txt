@@ -15,3 +15,12 @@ and I do not want to get off in the weeds of representing weights as doubles
 because double arithmetic has many pitfalls as we well know. 
 For the purposes of this series I’m going to assume that we can weight the 
 members of a distribution by an integer.
+
+I’m going to require that the weight function accept any value of type T. 
+If the value is not in the support, the weight is zero, and if the value is in 
+the support, the weight is a positive integer. 
+I’m going to further assume that the support and weights are small enough 
+that the total weight fits into an integer.
+
+If you divide the weight function by the total weight (as a double) then you have the 
+probability mass function of the discrete distribution.

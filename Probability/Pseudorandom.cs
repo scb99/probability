@@ -9,7 +9,7 @@ namespace Probability
     /// </summary>
     public static class Pseudorandom
     {
-        private readonly static ThreadLocal<Random> prng =
+        private static readonly ThreadLocal<Random> prng =
             new ThreadLocal<Random>(() => new Random(BetterRandom.NextInt()));
 
         /// <summary>

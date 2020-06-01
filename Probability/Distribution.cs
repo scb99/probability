@@ -213,7 +213,7 @@ namespace Probability
             Flip<bool>.Distribution(true, false, p);
 
         public static Metropolis<double> NormalMetropolis(this Func<double, double> weight) =>
-            Metropolis<double>.Distribution(weight, Normal.Standard, d => Normal.Distribution(d, 1.0));
+            Metropolis<double>.Distribution(weight, Normal.StandardNormal, d => Normal.Distribution(d, 1.0));
 
         public static Func<B, IWeightedDistribution<double>> Posterior<B>(
             this IWeightedDistribution<double> prior,

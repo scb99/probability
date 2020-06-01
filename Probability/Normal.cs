@@ -2,18 +2,22 @@
 {
     using static System.Math;
     using SCU = StandardContinuousUniform;
+    /// <summary>
+    /// Implements normal distribution (aka Gaussian distribution)
+    /// </summary>
     public sealed class Normal : IWeightedDistribution<double>
     {
         public double Mean { get; }
         public double Sigma { get; }
         private double μ => Mean;
         private double σ => Sigma;
+        private static readonly double piroot = 1.0 / Sqrt(2 * PI);
 
         /// <summary>
         /// Returns a standard normal distibution (i.e., a normal distribution 
         /// with μ = 0.0 and σ  = 1.0)
         /// </summary>
-        public readonly static Normal Standard = Distribution(0, 1);
+        public static readonly Normal StandardNormal = Distribution(0, 1);
 
         /// <summary>
         /// Returns a normal distribution with mean μ and standard deviation σ
@@ -25,8 +29,8 @@
             new Normal(mean, sigma);
         private Normal(double mean, double sigma)
         {
-            this.Mean = mean;
-            this.Sigma = sigma;
+            Mean = mean;
+            Sigma = sigma;
         }
 
         /// <summary>
@@ -49,7 +53,5 @@
         private double StandardSample() =>
             Sqrt(-2.0 * Log(SCU.Distribution.Sample())) *
                  Cos(2.0 * PI * SCU.Distribution.Sample());
-
-        private static readonly double piroot = 1.0 / Sqrt(2 * PI);
     }
 }

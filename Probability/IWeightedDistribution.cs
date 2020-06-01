@@ -8,9 +8,8 @@
         /// from the support of the distribution.
         /// </summary>
         /// <param name="t"></param>
-        /// <returns>If the distribution is continuous, the weight will be 1.0 if
-        /// t belongs to the support of the (continuous) distribution; 
-        /// otherwise the weight function should return 0. 
+        /// <returns>If the distribution is continuous, the weight will be 
+        /// determined by what type of continuous distribution that is being implemented. 
         /// If the distribution is discrete, the weight will be the frequency of
         /// t if t belongs to the support of the (discrete) distribution;
         /// otherwise the weight function should return 0.</returns>

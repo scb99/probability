@@ -68,6 +68,11 @@ namespace Probability
         public int Weight(int t) =>
             (Min <= t && t <= Max) ? 1 : 0;
 
+        /// <summary>
+        /// Determines weight of parameter
+        /// </summary>
+        /// <param name="t">The parameter</param>
+        /// <returns>Returns 1.0 if parameter is in the support, else 0</returns>
         double IWeightedDistribution<int>.Weight(int t) => this.Weight(t);
 
         public override string ToString() => 

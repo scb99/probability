@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Probability",
-    "\\Probability\\bin"
+    "\\Probability"
   ],
-  "SelectedNode": "\\Probability\\Probability.sln",
+  "SelectedNode": "\\Probability\\Distribution.cs",
   "PreviewInSolutionExplorer": false
 }
